@@ -5,6 +5,7 @@ falcon==2.0.0
 Flask==1.1.2
 Frozen-Flask==0.15
 future==0.18.2
+gitdb==4.0.5
 GitPython==3.1.7
 gunicorn==20.0.4
 hug==2.6.1
