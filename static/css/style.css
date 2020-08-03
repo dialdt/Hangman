@@ -1,0 +1,95 @@
+@font-face {
+    font-family: circus;
+    src: url('../fonts/CircusOrnate.ttf')
+}
+
+body {
+    background:url('../img/nice-snow.png');
+    background-color: #F7D8A1;
+}
+
+.main-title,
+.main-title-bottom {
+    font-family: circus;
+}
+
+.main-title {
+    font-size: 4rem;
+}
+
+.main-title-bottom {
+    font-size: 3rem;
+}
+
+.title-container {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.svg-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.main {
+    text-align: center;
+}
+
+.word {
+    font-family: circus;
+    font-size: 8vw;
+    white-space: nowrap;
+}
+
+body {
+    color: #212529;
+}
+
+.message-container {
+    font-family: Heebo;
+    border-top: 1px solid #212529;
+    border-bottom: 1px solid #212529;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.message-container p {
+    margin: 0px;
+}
+
+.decoration {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.img-container img {
+    width: 100px;
+    height: auto;
+}
+
+.img-container {
+    margin-bottom: 40px;
+}
+
+.result-container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.restart {
+    margin-top: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center p {
+    text-align: center;
+    width: 100%;
+}
+
+.center form {
+    text-align: center;
+    width: 100%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Marvellous Game of Intellect</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css')}}">
+</head>
+<body>
+<div class="container main">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 result-container">
+            <div class="img-container">
+                <img src="../static/img/typewriter.png" alt="typewriter">
+            </div>
+            <form method="POST">
+                <div class="input-group mb-3">
+                    <input type="text" id="guess" name="guess" class="form-control" placeholder="Enter one letter...if you dare...">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-dark">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row center">
+        <p class="word">
+                {% for l in blankWord %}
+                    {{ l }}
+                {% endfor %}
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3 message-container">
+            <p class="message">
+                    {{ rightOrWrongMsg }}
+            </p>
+            <p class="message">
+                Letters guessed: 
+                {% for l in lettersGuessed %}
+                    {{ l }}
+                {% endfor %}
+                
+            </p>
+            <p class="message">
+                Guesses left: {{ userGuesses }}
+            </p>
+        </div>
+    </div>
+    <div class="row restart center">
+        <form action="/reset">
+            <button type="submit" class="btn btn-dark">
+                New word
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
